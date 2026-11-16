@@ -1,0 +1,35 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrar no grupo · Garimpo Tech</title>
+<meta name="description" content="Ofertas de tecnologia checadas todo dia. Entre no grupo do Telegram do Garimpo Tech.">
+<meta property="og:title" content="Garimpo Tech · grupo de ofertas no Telegram"><meta property="og:description" content="Ofertas de tecnologia checadas todo dia.">
+<style>
+:root{--bg:#0b1020;--card:#141b30;--ink:#e8ecf6;--mut:#9aa6c0;--acc:#ff7a1a;--cy:#00e5ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 20px 64px}h1{font-size:2rem;margin:.2em 0}h2{margin-top:1.8em;color:var(--cy);font-size:1.2rem}
+a{color:var(--acc)}.card{background:var(--card);border-radius:14px;padding:18px 22px;margin:18px 0}.mut{color:var(--mut);font-size:.92rem}
+nav a{margin-right:16px}hr{border:0;border-top:1px solid #26324a;margin:2em 0}
+
+.big{display:block;text-align:center;background:var(--acc);color:#0b1020;font-weight:800;font-size:1.15rem;padding:16px 20px;border-radius:14px;text-decoration:none;margin:14px 0}
+.alt{display:block;text-align:center;border:2px solid var(--cy);color:var(--cy);font-weight:700;padding:12px 18px;border-radius:14px;text-decoration:none;margin:10px 0}
+#aviso{display:none;border:2px solid var(--acc)}
+ol{padding-left:1.2em;margin:.4em 0}code.u{display:block;background:#0b1020;border:1px solid #26324a;border-radius:8px;padding:10px;margin:10px 0;user-select:all;text-align:center;font-size:1.05rem}
+</style></head><body><main>
+<h1>Garimpo Tech 💎</h1>
+<p>Ofertas de tecnologia checadas todo dia, direto no Telegram.</p>
+<div class="card" id="aviso"><b>Abrindo pelo TikTok?</b> O navegador do TikTok não deixa abrir o Telegram. Faça assim:
+<ol><li>Toque nos <b>três pontinhos (⋯)</b> no canto da tela;</li><li>Escolha <b>“Abrir no navegador”</b> (Chrome);</li><li>Toque em <b>“Abrir no Telegram”</b>.</li></ol></div>
+<a class="big" id="tg" href="https://t.me/garimpotechofertasbr">Abrir no Telegram</a>
+<a class="alt" id="web" href="https://t.me/garimpotechofertasbr">Ver o grupo no navegador</a>
+<div class="card"><b>Se nada abrir:</b> abra o Telegram, toque na lupa e procure por
+<code class="u">@garimpotechofertasbr</code>
+<span class="mut">Toque no texto acima para selecionar e copiar.</span></div>
+<p class="mut">Também estamos no Instagram: <a href="https://www.instagram.com/garimpotechofertasbr/">@garimpotechofertasbr</a>. Links de produtos são de afiliado.</p>
+<script>
+var ua = navigator.userAgent || "", android = /Android/i.test(ua), tiktok = /(TikTok|musical_ly|BytedanceWebview|Bytedance|trill)/i.test(ua);
+var tg = document.getElementById('tg');
+if (android) {
+  // tenta abrir o app direto (intent do Android); se o navegador interno barrar, o aviso abaixo explica o caminho
+  tg.href = "intent://resolve?domain=garimpotechofertasbr#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=" + encodeURIComponent("https://t.me/garimpotechofertasbr") + ";end";
+}
+if (tiktok) { document.getElementById('aviso').style.display = 'block'; }
+</script></main></body></html>
