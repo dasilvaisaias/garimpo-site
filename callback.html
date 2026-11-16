@@ -1,0 +1,27 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conexão com o TikTok · Garimpo Tech</title><style>
+:root{--bg:#0b1020;--card:#141b30;--ink:#e8ecf6;--mut:#9aa6c0;--acc:#ff7a1a;--cy:#00e5ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 20px 64px}h1{font-size:2rem;margin:.2em 0}h2{margin-top:1.8em;color:var(--cy);font-size:1.2rem}
+a{color:var(--acc)}.card{background:var(--card);border-radius:14px;padding:18px 22px;margin:18px 0}.mut{color:var(--mut);font-size:.92rem}
+nav a{margin-right:16px}hr{border:0;border-top:1px solid #26324a;margin:2em 0}
+
+code{display:block;word-break:break-all;background:#0b1020;border:1px solid #26324a;border-radius:8px;padding:12px;margin:10px 0;user-select:all}</style></head><body><main>
+<nav><a href="./">Garimpo Tech</a><a href="privacidade.html">Privacidade / Privacy</a><a href="termos.html">Termos / Terms</a></nav>
+<h1 id="t">Conexão com o TikTok</h1>
+<div class="card" id="box"><p>Aguardando retorno do TikTok…</p></div>
+<p class="mut">Esta página só mostra o resultado da autorização do TikTok (Login Kit). O código é de uso único, expira em minutos e só funciona junto com a chave secreta do app, que fica em um servidor privado. Nada é enviado a terceiros por esta página.<br>
+This page only displays the result of the TikTok authorization (Login Kit). The code is single-use, short-lived and only works with the app's secret key, which is kept on a private server. Nothing is sent to third parties by this page.</p>
+<script>
+var p = new URLSearchParams(location.search), box = document.getElementById('box'), t = document.getElementById('t');
+function esc(s){return String(s).replace(/[&<>"']/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+if (p.get('code')) {
+  t.textContent = 'Conectado ✔ / Connected ✔';
+  box.innerHTML = '<p>Autorização concluída. Código de uso único / One-time code:</p><code>' + esc(p.get('code')) + '</code><p class="mut">state: ' + esc(p.get('state')||'') + '</p>';
+} else if (p.get('error')) {
+  t.textContent = 'Não foi possível conectar / Could not connect';
+  box.innerHTML = '<p>' + esc(p.get('error')) + ': ' + esc(p.get('error_description')||'') + '</p>';
+} else {
+  box.innerHTML = '<p>Nenhum retorno do TikTok nesta página. Use o botão “Conectar TikTok” na <a href="./">página inicial</a>.</p>';
+}
+</script></main></body></html>
